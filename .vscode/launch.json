@@ -10,9 +10,11 @@
             "request": "launch",
             "mode": "auto",
             "program": "${fileDirname}",
-            "cwd": "${workspaceFolder}}",
             "env": {},
-            "args": []
+            "args": [
+                "-o",
+                "/tmp/go-spring-demo"
+            ]
         }
     ]
 }

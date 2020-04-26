@@ -21,7 +21,7 @@ type Options struct {
 func setOptions(opts *Options, flagset *flag.FlagSet) {
 	flagset.StringVar(&opts.ProjectName, "p", "gospring-demo", "project name")
 	flagset.StringVar(&opts.OutputDir, "o", "gospring-demo", "project store directory,default current pwd")
-	flagset.StringVar(&opts.SupportModule, "m", "web", "support module.etc mysql,redis")
+	flagset.StringVar(&opts.SupportModule, "m", "all", "support module.etc mysql,redis,web,default use all contains(web,mysql,web)")
 	flagset.BoolVar(&opts.PrintVersion, "v", false, "print version and exit")
 
 	flagset.Usage = func() {
@@ -47,7 +47,7 @@ func NewOptions() *Options {
 		fmt.Println("create-go-spring v" + Version)
 	}
 
-	if flag.NArg() != 1 {
+	if flag.NFlag() != 1 {
 		if opts.PrintVersion {
 			os.Exit(0)
 		} else {

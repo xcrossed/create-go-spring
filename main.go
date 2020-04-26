@@ -3,8 +3,10 @@ package main
 import "github.com/xcrossed/create-go-spring/create"
 
 func main() {
-	//初始化
+	// 初始化
 	opts := create.NewOptions()
 	creator := create.NewCreate(opts)
 	creator.Run()
+
+	// time.Sleep(1 * time.Second)
 }

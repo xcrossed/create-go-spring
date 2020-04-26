@@ -1,5 +1,5 @@
 build: 
-	go build -o build/create-gospring main.go
+	go build -o bin/create-gospring main.go
 
 clean:
-	rm -rf build/
+	rm -rf bin/
